@@ -1,5 +1,8 @@
 package tn.esprit.spring.entities;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +16,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
+@Getter
+@Setter
 public class Entreprise implements Serializable{
 	
 	private static final long serialVersionUID = 3152690779535828408L;
@@ -39,36 +44,6 @@ public class Entreprise implements Serializable{
 		this.raisonSocial = raisonSocial;
 	}
  
-	public String getName() {
-		return name;
-	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getRaisonSocial() {
-		return raisonSocial;
-	}
-
-	public void setRaisonSocial(String raisonSocial) {
-		this.raisonSocial = raisonSocial;
-	}
-
-	public List<Departement> getDepartements() {
-		return departements;
-	}
-
-	public void setDepartements(List<Departement> departements) {
-		this.departements = departements;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 	
 }
